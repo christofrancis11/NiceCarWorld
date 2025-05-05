@@ -1,0 +1,385 @@
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;hero-content
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('https://content.jdmagicbox.com/comp/kannur/a8/9999px497.x497.161112135915.z5a8/catalogue/nice-car-world-pallikunnu-kannur-second-hand-car-dealers-m6lds2y.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(80, 71, 71, 0.5); /* Adjust darkness */
+    z-index: -1;
+}
+
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff5722;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e04e1a;
+}
+
+:root {
+    --primary: #e63946;
+    --secondary: #1d3557;
+    --light: #f1faee;
+    --dark: #212529;
+    --gray: #6c757d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+
+/* About Section */
+.about {
+    background-color: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.about-text h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 60px;
+    background-color: var(--primary);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--gray);
+}
+
+.trust-points {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.trust-point {
+    margin-right: 2rem;
+    text-align: center;
+}
+
+.trust-point i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.trust-point h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    section {
+        padding: 4rem 1rem;
+    }
+
+    .about-content,
+    .location-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .trust-points {
+        flex-direction: column;
+    }
+
+    .trust-point {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .gallery-card {
+        height: 300px;
+    }
+}
+
+
+/* Services Section */
+.services {
+    background-color: #f8f9fa;
+}
+        
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+        
+.section-title h2 {
+    font-size: 2.5rem;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 1rem;
+}
+        
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 60px;
+    background-color: var(--primary);
+}
+        
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+        
+.service-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+        
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+        
+.service-icon {
+    height: 120px;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        
+.service-icon i {
+    font-size: 3rem;
+    color: var(--light);
+}
+        
+.service-content {
+    padding: 1.5rem;
+}
+        
+.service-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+        
+.service-content p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Location Section */
+.location {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.location h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+
+
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+.social-icons a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.social-icons a:hover {
+    color: #ff5722;
+}
+
+.privacy-note {
+    margin-top: 2rem;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 1000;
+}
+
+.whatsapp-button:hover {
+    background-color: #1f9b55;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel-item {
+        margin-bottom: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick-links, .contact-info, .social-icons {
+        margin-bottom: 1rem;
+    }
+}
